@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- section01 -->
+    <section class="sec-01">
+      <div class="container">
+        <h2 class="main-title">Scroll Reveal Tutorial</h2>
+        <div class="content">
+          <div class="image">
+            <img src="./images/img1.jpg" alt="" />
+          </div>
+          <div class="text-box">
+            <h3>Shin Code</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              asperiores ea mollitia harum, dolore iste. Nesciunt necessitatibus
+              pariatur autem optio.
+            </p>
+          </div>
+        </div>
+        <div class="media-icons">
+          <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- section02 -->
+    <section class="sec-02">
+      <div class="container">
+        <h3 class="section-title">Shin Tutorial</h3>
+        <div class="content">
+          <div class="image">
+            <img src="./images/img2.jpg" alt="" />
+          </div>
+          <div class="info">
+            <h4 class="info-title">Description</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure
+              repellendus itaque ab beatae ad odit dicta, culpa recusandae
+              necessitatibus inventore.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section03 -->
+    <section class="sec-03">
+      <div class="container">
+        <h3 class="section-title">Shin Code</h3>
+        <div class="content">
+          <div class="media-info">
+            <li>
+              <a href="#"><i class="fab facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-youtube"></i> Youtube</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+            </li>
+          </div>
+          <div class="image">
+            <img src="./images/img3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="vanilla-tilt.js"></script>
+    <script>
+      //共通のオプション設定
+      ScrollReveal({
+        reset: true,
+        distance: "60px",
+        duration: 2000, //2sかけてアニメーション
+        delay: 200 /* 0.2s後に発動 */,
+      });
+
+      ScrollReveal().reveal(".main-title, .section-title", {
+        delay: 200,
+        origin: "left",
+      });
+      ScrollReveal().reveal(".sec-01 .image, .info", {
+        delay: 600,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".text-box", {
+        delay: 700,
+        origin: "right",
+      });
+      ScrollReveal().reveal(".media-icons i", {
+        delay: 500,
+        origin: "bottom",
+        interval: 200,
+      });
+      ScrollReveal().reveal(".sec-02 .image, .sec-03 .image", {
+        delay: 500,
+        origin: "top",
+      });
+      ScrollReveal().reveal(".media-info li", {
+        delay: 500,
+        origin: "left",
+        interval: 200,
+      });
+
+      //vanilla-tilt.js
+      VanillaTilt.init(document.querySelector(".text-box"), {
+        max: 25,
+        speed: 400,
+        glare: 1,
+        transition: false,
+      });
+    </script>
+  </body>
+</html>
