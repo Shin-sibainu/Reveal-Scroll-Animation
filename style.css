@@ -46,7 +46,7 @@ section {
 
 .content .image {
   position: relative;
-  width: 800px;
+  width: 600px;
   height: 400px;
   overflow: hidden;
 }
@@ -66,18 +66,16 @@ section {
   z-index: 20;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
-  position: absolute;
   padding: 40px;
   max-width: 400px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  overflow: hidden;
+  transform: translate(-80px, 50px);
 }
 
 .content .text-box h3 {
   font-size: 2em;
   margin-bottom: 10px;
-  transform: translateZ(150px);
 }
 
 .media-icons {
